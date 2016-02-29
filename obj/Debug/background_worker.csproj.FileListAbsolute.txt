@@ -1,0 +1,10 @@
+c:\users\floriqn\documents\visual studio 2015\Projects\background_worker\background_worker\bin\Debug\background_worker.exe.config
+c:\users\floriqn\documents\visual studio 2015\Projects\background_worker\background_worker\bin\Debug\background_worker.exe
+c:\users\floriqn\documents\visual studio 2015\Projects\background_worker\background_worker\bin\Debug\background_worker.pdb
+c:\users\floriqn\documents\visual studio 2015\Projects\background_worker\background_worker\obj\Debug\background_worker.csprojResolveAssemblyReference.cache
+c:\users\floriqn\documents\visual studio 2015\Projects\background_worker\background_worker\obj\Debug\background_worker.Properties.Resources.resources
+c:\users\floriqn\documents\visual studio 2015\Projects\background_worker\background_worker\obj\Debug\background_worker.csproj.GenerateResource.Cache
+c:\users\floriqn\documents\visual studio 2015\Projects\background_worker\background_worker\obj\Debug\background_worker.exe
+c:\users\floriqn\documents\visual studio 2015\Projects\background_worker\background_worker\obj\Debug\background_worker.pdb
+c:\users\floriqn\documents\visual studio 2015\Projects\background_worker\background_worker\obj\Debug\background_worker.Form1.resources
+c:\users\floriqn\documents\visual studio 2015\Projects\background_worker\background_worker\obj\Debug\background_worker.formTri.resources
