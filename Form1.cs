@@ -16,12 +16,6 @@ namespace background_worker
         public Form1()
         {
             InitializeComponent();
-            double[] array = { 5,4,2,1,8,7 };
-            Tri.TriSelectionPermutation(array);
-            foreach(var item in array)
-            {
-                Console.WriteLine(item);
-            }
         }
 
         private void InitBtn_Click(object sender, EventArgs e)
