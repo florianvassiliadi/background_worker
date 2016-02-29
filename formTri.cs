@@ -21,16 +21,15 @@ namespace background_worker
 
         private void formTri_Load(object sender, EventArgs e)
         {
-            Tri(tableau);
             backgroundWorker1.RunWorkerAsync();
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            Tri(tableau);
+            Tri(tableau, e);
         }
 
-        private void Tri(double[] tableau)
+        private void Tri(double[] tableau,DoWorkEventArgs e)
         {
             int i, iRech, iMin;
             double tmp;
@@ -50,13 +49,42 @@ namespace background_worker
                     tableau[i] = tmp;
                 }
                 backgroundWorker1.ReportProgress((i * 100) / (tableau.Length - 1));
-
+                //Annulation demandé?
+                if (backgroundWorker1.CancellationPending)
+                {
+                    e.Cancel = true;
+                    return;
+                }
             }
         }
 
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             progressBar1.Value = e.ProgressPercentage;
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if(e.Cancelled)
+            {
+                MessageBox.Show("Tri annulé!");
+            }
+            else
+            {
+                MessageBox.Show("Tri terminé!");
+                btnOk.Enabled = true;
+            }
+        }
+
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+            backgroundWorker1.CancelAsync();
+            this.Close();
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
